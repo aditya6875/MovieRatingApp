@@ -1,0 +1,23 @@
+<div class="search">
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchName" placeholder="Search by Name" class="search-input" />
+        <button (click)="searchByName()" class="search-button">Search by Name</button>
+      </div>
+      
+      <div class="search-container">
+        <input type="text" [(ngModel)]="searchGenre" placeholder="Search by Genre" class="search-input" />
+        <button (click)="searchByGenre()" class="search-button">Search by Genre</button>
+      </div>
+</div>
+<div class="main">
+    
+    <div class="movie-card"  *ngFor="let movie of movies">
+        <img src={{movie.Poster}} alt="movie\images\istockphoto-1191001701-612x612.jpg" class="movie-image">
+        <div class="movie-details">
+            <h2 class="movie-name">{{movie.Title}}</h2>
+            <p class="movie-genre">Genre</p>
+            <p class="movie-description">Movie Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo vel nisi bibendum tristique.</p>
+            <p class="movie-rating">Rating: 8.5</p>
+        </div>
+    </div>
+</div>
